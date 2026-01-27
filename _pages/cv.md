@@ -59,9 +59,9 @@ Skills
   * NumPy
   * Scikit-Learn
   * NLTK
-  * Cypher Query Language (Neo4j)
-  * Gurobi
-  * ROS
+* Cypher Query Language (Neo4j)
+* Gurobi
+* ROS
 
 Languages
 ======
