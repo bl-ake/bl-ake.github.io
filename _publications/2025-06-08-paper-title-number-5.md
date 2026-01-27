@@ -1,13 +1,12 @@
 ---
-title: "Paper Title Number 5, with math $$E=mc^2$$"
+title: "Heterogeneous Graph Sparsification for Efficient Representation Learning"
 collection: publications
 category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+permalink: /publication/2025-06-08-heterogeneous-graph-sparsification
+excerpt: "Sparsification techniques for heterogeneous graphs to improve the scalability of representation learning."
+date: 2022-01-01
+venue: "IEEE International Conference on Bioinformatics and Biomedicine (BIBM)"
+paperurl: "https://doi.org/10.1109/BIBM55620.2022.9995124"
+pdfurl: "/files/Adversarially Attacking Graph Properties and Sparsification in Graph Learning.pdf"
+# citation: 'Chunduru, C., Zhu, C. J., Gaines, B. B., &amp; Bi, J. (2022). "Heterogeneous Graph Sparsification for Efficient Representation Learning." <i>IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</i>, 1891–1896.'
 ---
-
-Using [MathJax](https://www.mathjax.org/) in the description is supported - $$E=mc^2$$ - however, the use must be mindful that the default delimiters are `$$...$$` and `\\[...\\]` which differs from the `$...$` that is typically expected.
