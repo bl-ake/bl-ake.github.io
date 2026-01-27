@@ -1,152 +1,154 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Blake B. Gaines",
+    "email": "blakebgaines@gmail.com",
+    "phone": "(860) 617-9241",
+    "website": "https://bl-ake.github.io",
+    "summary": "Ph.D. student in Computer Science at the University of Connecticut.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "Storrs",
       "countryCode": "US",
-      "region": ""
+      "region": "CT"
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "bl-ake",
+        "url": "https://github.com/bl-ake"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "UConn Laboratory of ML & Health Informatics",
+      "position": "Research Assistant",
+      "website": "",
+      "startDate": "2020-01-01",
+      "endDate": "",
+      "summary": "Developing novel machine learning techniques for applications in bioinformatics.",
+      "highlights": []
+    },
+    {
+      "company": "The Travelers Companies",
+      "position": "Software Developer",
+      "website": "",
+      "startDate": "2019-01-01",
+      "endDate": "2019-12-31",
+      "summary": "Designed graph databases and representation learning methods for internal documents.",
+      "highlights": []
+    },
+    {
+      "company": "The Travelers Companies",
+      "position": "Software Developer",
+      "website": "",
+      "startDate": "2024-01-01",
+      "endDate": "2025-12-31",
+      "summary": "Designed graph databases and representation learning methods for internal documents.",
+      "highlights": []
+    },
+    {
+      "company": "UConn School of Engineering",
+      "position": "Teaching Assistant",
+      "website": "",
+      "startDate": "2021-01-01",
+      "endDate": "",
+      "summary": "Teaching assistant for Big Data Analytics (CSE 4502/5717), Discrete Systems (CSE 2500), and Machine Learning (CSE 5819).",
+      "highlights": []
+    },
+    {
+      "company": "Boehringer Ingelheim",
+      "position": "Software Developer",
+      "website": "",
+      "startDate": "2021-01-01",
+      "endDate": "2022-12-31",
+      "summary": "Created an automated question-answering pipeline for pharmaceutical researchers.",
+      "highlights": []
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
+      "institution": "University of Connecticut",
+      "area": "Ph.D. in Computer Science",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "startDate": "2022-08-01",
+      "endDate": "2027-05-01",
+      "gpa": null,
+      "courses": [
+        "Concentration in machine learning and health informatics",
+        "Supervised by Prof. Jinbo Bi"
+      ]
+    },
+    {
+      "institution": "University of Connecticut",
+      "area": "B.S. in Computer Science (Computational Data Analytics)",
+      "studyType": "",
+      "startDate": "2018-08-01",
+      "endDate": "2022-05-01",
+      "gpa": 3.99,
+      "courses": [
+        "Honors Program",
+        "Minor in Linguistics"
+      ]
+    },
+    {
+      "institution": "University of Connecticut",
+      "area": "B.A. in Mathematics",
+      "studyType": "",
+      "startDate": "2018-08-01",
+      "endDate": "2022-05-01",
       "gpa": null,
       "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
-  "references": [],
-  "publications": [
+  "skills": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "Machine Learning and AI",
+      "level": "",
+      "keywords": [
+        "Machine Learning",
+        "Graph Neural Networks",
+        "Explainable AI",
+        "Natural Language Processing",
+        "Knowledge Graphs"
+      ]
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "name": "Programming and Tools",
+      "level": "",
+      "keywords": [
+        "Python",
+        "PyTorch",
+        "PyTorch Geometric",
+        "TensorFlow",
+        "NumPy",
+        "Scikit-learn",
+        "NLTK",
+        "Git",
+        "ROS",
+        "HuggingFace"
+      ]
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "Data and Optimization",
+      "level": "",
+      "keywords": [
+        "Distributed Computing",
+        "High-performance data processing",
+        "Cypher (Neo4j)",
+        "Gurobi"
+      ]
     }
   ],
-  "presentations": [
+  "languages": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
+      "language": "English",
+      "fluency": "Native"
     },
     {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
-  "teaching": [
-    {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "language": "Mandarin Chinese",
+      "fluency": "Professional working proficiency"
     }
   ]
 }

@@ -1,14 +1,14 @@
 ---
-title: "Paper Title Number 3"
+title: "Mining Large-Scale Knowledge Graphs for Chemical Reaction Fingerprints"
 collection: publications
-category: manuscripts
-permalink: /publication/2015-10-01-paper-title-number-3
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
-date: 2015-10-01
-venue: 'Journal 1'
-slidesurl: 'https://academicpages.github.io/files/slides3.pdf'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2015). &quot;Paper Title Number 3.&quot; <i>Journal 1</i>. 1(3).'
+category: conferences
+permalink: /publication/2015-10-01-mining-kg-chemical-reaction-fingerprints
+excerpt: "Methods for extracting chemical reaction fingerprints from large-scale knowledge graphs for downstream modeling."
+date: 2023-01-01
+venue: "2023 IEEE International Conference on Big Data"
+paperurl: "https://doi.org/10.1109/BigData59044.2023.10386300"
+pdfurl: "/files/Mining Large-Scale Knowledge Graphs for Chemical Reaction Fingerprints.pdf"
+# citation: 'Gaines, B. B., Song, M., &amp; Bi, J. (2023). "Mining Large-Scale Knowledge Graphs for Chemical Reaction Fingerprints." <i>2023 IEEE International Conference on Big Data</i>, 510–515.'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+We construct and mine large chemical knowledge graphs to derive reaction fingerprints that capture rich structural and contextual information. These fingerprints enable accurate downstream tasks such as reaction similarity, clustering, and predictive modeling for chemical discovery without the need for training a large embedding model.
