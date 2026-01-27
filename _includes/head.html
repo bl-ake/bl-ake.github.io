@@ -10,6 +10,11 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  // Force light mode immediately - remove any dark theme attribute and clear dark mode preferences
+  document.documentElement.removeAttribute('data-theme');
+  if (localStorage.getItem('theme') === 'dark') {
+    localStorage.setItem('theme', 'light');
+  }
 </script>
 
 <!-- For all browsers -->
