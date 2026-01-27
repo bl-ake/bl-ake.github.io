@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}  
 
-<!-- <br> -->
+<div style="height: 0.5em;"></div>
 
 Education
 ======
