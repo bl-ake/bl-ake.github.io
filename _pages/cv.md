@@ -22,6 +22,8 @@ Education
   * Minor in Linguistics
   * Scholarship for Academic Excellence, Babbidge Scholar
 * B.A. in Mathematics, University of Connecticut, 2018–2022
+  * Honors Program, GPA: 3.99  
+  * Minor in Linguistics
     
 Work experience
 ======
