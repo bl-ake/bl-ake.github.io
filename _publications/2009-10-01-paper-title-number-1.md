@@ -7,6 +7,7 @@ excerpt: "Analyzes the polyhedral structure induced by ReLU networks to better u
 date: 2026-01-01
 venue: "International Conference on Learning Representations (ICLR), Oral Presentation"
 paperurl: "https://openreview.net/forum?id=TgLW2DiRDG"
+pdfurl: "/files/ReLU_Geometry_ICLR_2026.pdf"
 # citation: 'Gaines, B. B., &amp; Bi, J. (2026). "Characterizing the Discrete Geometry of ReLU Networks." <i>International Conference on Learning Representations (ICLR)</i>.'
 ---
 
