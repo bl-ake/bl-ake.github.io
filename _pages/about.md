@@ -17,5 +17,6 @@ Are you researching ReLU network geometry? Check out my new Python package [**Re
 <!-- - **[Talks](/talks/)** - See presentations and talks I've given at conferences and events -->
 <!-- - **[Talk Map](/talkmap.html)** - Interactive map showing locations where I've presented -->
 - **[CV](/cv/)** - All about me
+- **[CV (PDF)](/files/Resume.pdf)** - Download the PDF version
 - **[Teaching](/teaching/)** - A list of courses I've helped run
 <!-- - **[Portfolio](/portfolio/)** - Explore my portfolio of projects and work -->

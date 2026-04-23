@@ -11,12 +11,16 @@ redirect_from:
 
 <div style="height: 0.5em;"></div>
 
+Download a PDF version of this CV: [Resume.pdf](/files/Resume.pdf)
+
 Education
 ======
 * Ph.D. in Computer Science, University of Connecticut, 2022–2027 (expected)  
+  * GPA: 4.00  
   * Concentration in machine learning and health informatics  
   * Supervised by Prof. Jinbo Bi
   * First place - School of Engineering’s Graduate Research Poster Competition (2023) 
+  * Department Predoctoral Fellowship (2024, 2025)
 * B.S. in Computer Science (Computational Data Analytics), University of Connecticut, 2018–2022  
   * Honors Program, GPA: 3.99  
   * Minor in Linguistics
@@ -33,7 +37,7 @@ Work experience
 
 * The Travelers Companies  
   *Software Developer* (2019, 2024–2025)  
-  * Designing graph databases and representation learning methods for internal documents.
+  * Graph databases, representation learning, and LLMs for organizing internal documents.
 
 * School of Engineering, University of Connecticut  
   *Teaching Assistant* (2021, 2024–Present)  
@@ -41,11 +45,12 @@ Work experience
 
 * Boehringer Ingelheim  
   *Software Developer* (2021–2022)  
-  * Created an automated question-answering pipeline for pharmaceutical researchers.
+  * Developed an LLM-based question-answering pipeline for pharmaceutical researchers.
   
   
 Service and leadership
 ======
+* Relucent (2026) - Open-source Python library for analyzing ReLU neural networks ([pypi.org/project/relucent](https://pypi.org/project/relucent))
 * Primary Organizer, UConn AI Summer Camp, 2025  
 * Volunteer Computer Science Instructor, Tolland Middle School, 2023–2025
 * Social Justice Committee Member, UConn Graduate Employee Union (GEU), 2022–2023  
@@ -53,6 +58,8 @@ Service and leadership
 
 Skills
 ======
+* Machine Learning
+* Natural Language Processing
 * Distributed Computing
 * Python
   * PyTorch
@@ -63,6 +70,8 @@ Skills
   * NLTK
 * Cypher Query Language (Neo4j)
 * Gurobi
+* Git
+* RDKit
 * ROS
 
 Languages
