@@ -15,9 +15,12 @@
               {% assign domain = base_path %}
             {% endif %}
             <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+              <a href="{{ domain }}{{ link.url }}" data-nav-url="{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
+          <li class="masthead__menu-item lang-toggle-item persist">
+            <button id="lang-toggle" aria-label="Switch language">EN / 中文</button>
+          </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>

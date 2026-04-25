@@ -14,4 +14,57 @@
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
+<!-- Language toggle styles -->
+<style>
+  .lang-toggle-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .greedy-nav .visible-links {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .greedy-nav .visible-links li {
+    display: block;
+  }
+
+  .greedy-nav .visible-links .lang-toggle-item {
+    margin-left: auto;
+    flex: 0 0 auto;
+  }
+
+  /* When the overflow toggle is visible, keep clear space on the right. */
+  #site-nav > button:not(.hidden) ~ .visible-links .lang-toggle-item {
+    margin-right: 3rem;
+  }
+
+  #lang-toggle {
+    background: none;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.75em;
+    color: inherit;
+    padding: 2px 7px;
+    letter-spacing: 0.03em;
+    opacity: 0.65;
+    transition: opacity 0.15s;
+    line-height: 1.6;
+  }
+
+  #lang-toggle:hover {
+    opacity: 1;
+  }
+
+  .lang-toggle-item.hidden,
+  #lang-toggle.hidden {
+    display: inline-flex !important;
+    visibility: visible !important;
+  }
+</style>
+
 <!-- end custom head snippets -->

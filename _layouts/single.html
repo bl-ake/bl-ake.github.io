@@ -3,6 +3,9 @@ layout: default
 ---
 
 {% include base_path %}
+{% assign zh_title = page.zh_title | default: page.title %}
+{% assign zh_type = page.zh_type | default: page.type %}
+{% assign zh_venue = page.zh_venue | default: page.venue %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
 {% include page__hero.html %}
@@ -32,8 +35,8 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
       <header>
-        {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" |
-            remove: "</p>" }}</h1>{% endif %}
+        {% if page.title %}<h1 class="page__title" itemprop="headline"><span data-lang="en">{{ page.title | markdownify | remove: "<p>" |
+            remove: "</p>" }}</span><span data-lang="zh">{{ zh_title | markdownify | remove: "<p>" | remove: "</p>" }}</span></h1>{% endif %}
         {% if page.read_time %}
         <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
         {% endif %}
@@ -44,9 +47,9 @@ layout: default
         {% endif %}
 
         {% if page.collection == 'teaching' %}
-        <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        <p><span data-lang="en">{{ page.type }}, <i>{{ page.venue }}</i></span><span data-lang="zh">{{ zh_type }}，<i>{{ zh_venue }}</i></span>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
-        <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        <p><span data-lang="en">Published in <i>{{ page.venue }}</i></span><span data-lang="zh">发表于 <i>{{ zh_venue }}</i></span>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}
         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{
             site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time
@@ -89,8 +92,8 @@ layout: default
             href="{{ page.pdfurl }}">Download PDF</a>{% endif %} | <a href="{{ page.bibtexurl }}">Download Bibtex</a>
         </p>
         {% elsif page.paperurl %}
-        <p style="font-size: smaller"><a href="{{ page.paperurl }}">View Paper</a></a>{% if page.pdfurl %} | <a
-            href="{{ page.pdfurl }}">Download PDF</a>{% endif %}</p>
+        <p style="font-size: smaller"><a href="{{ page.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a></a>{% if page.pdfurl %} | <a
+            href="{{ page.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %}</p>
         {% elsif page.citation and page.bibtexurl %}
         <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a
             href="{{ page.bibtexurl }}">Download Bibtex</a></p>
