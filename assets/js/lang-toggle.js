@@ -153,10 +153,30 @@
   document.addEventListener('DOMContentLoaded', function () {
     var toggle = document.getElementById('lang-toggle');
     if (toggle) {
-      toggle.addEventListener('click', function () {
+      if (window.jQuery) {
+        try {
+          window.jQuery(toggle).off('click');
+          window.jQuery(toggle).off('mousedown');
+          window.jQuery(toggle).off('touchstart');
+        } catch (e) {
+          // ignore
+        }
+      }
+
+      // Prevent greedy-nav from treating this as the hamburger button.
+      // Do it in capture phase so we win even if greedy-nav bound directly to #lang-toggle.
+      toggle.addEventListener('click', function (e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (typeof e.stopImmediatePropagation === 'function') {
+            e.stopImmediatePropagation();
+          }
+        }
+
         var current = activeLanguage || getInitialLanguage();
         applyLanguage(current === 'en' ? 'zh' : 'en', { persist: true });
-      });
+      }, true);
     }
 
     ensureToggleVisible();

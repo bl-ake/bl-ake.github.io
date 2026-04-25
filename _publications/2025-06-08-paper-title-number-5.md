@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/2025-06-08-heterogeneous-graph-sparsification
 excerpt: "Sparsification techniques for heterogeneous graphs to improve the scalability of representation learning."
-zh_excerpt: "面向异构图的稀疏化方法，用于提升表示学习在大规模图上的可扩展性。"
+zh_excerpt: "面向异构图表示学习的图稀疏化方法，用于提升大规模图学习的可扩展性和效率。"
 date: 2022-01-01
 venue: "IEEE International Conference on Bioinformatics and Biomedicine (BIBM)"
 zh_venue: "IEEE International Conference on Bioinformatics and Biomedicine (BIBM)"

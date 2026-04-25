@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2024-02-17-fragment-based-deep-molecular-generation
 excerpt: "A fragment-based deep generative model for molecular design using a hierarchical chemical graph representation."
-zh_excerpt: "一个面向分子设计的片段级深度生成模型，基于分层化学图表示。"
+zh_excerpt: "一种面向分子设计的基于片段的深度生成模型，采用层次化化学图表示。"
 date: 2023-01-01
 venue: "Molecular Informatics"
 zh_venue: "Molecular Informatics"
@@ -18,5 +18,5 @@ This work introduces a multi-resolution graph variational autoencoder that opera
 </div>
 
 <div data-lang="zh" markdown="1">
-这项工作提出一个多分辨率图变分自编码器，在分层化学图表示上进行分子生成。通过利用片段级结构，模型能够生成化学上有效且具有多样性的分子。
+本文提出一种多分辨率图变分自编码器，基于层次化化学图表示进行分子生成。通过利用分子片段结构，模型能够生成化学有效且具有多样性的分子。
 </div>

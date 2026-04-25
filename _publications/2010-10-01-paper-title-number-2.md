@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2010-10-01-explaining-gnns-mip
 excerpt: "A mixed-integer programming framework for generating faithful explanations of graph neural network predictions."
-zh_excerpt: "一个混合整数规划框架，用于生成忠实于图神经网络预测行为的解释。"
+zh_excerpt: "一种混合整数规划框架，用于为图神经网络预测生成具有高忠实度的解释。"
 date: 2025-01-01
 venue: "Neurocomputing"
 zh_venue: "Neurocomputing"
@@ -18,5 +18,5 @@ This paper proposes a mixed-integer programming (MIP) framework that constructs 
 </div>
 
 <div data-lang="zh" markdown="1">
-这篇文章提出一个混合整数规划（MIP）框架，为图神经网络构造基于优化的精确解释。我们将GNN本身和结构约束编码到MIP问题中，从而得到全局最优的解释集合；这些解释既忠实于模型行为，也对实际使用者保持较好的可解释性。
+本文提出一种混合整数规划（MIP）框架，为图神经网络构造基于优化的精确解释。通过将 GNN 和结构约束编码为 MIP 模型，我们可以得到全局最优的解释子图；这些解释对模型行为具有较高忠实度，也便于研究人员理解。
 </div>

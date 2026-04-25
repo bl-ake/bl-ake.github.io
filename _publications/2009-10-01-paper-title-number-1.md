@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/2009-10-01-characterizing-discrete-geometry-relu-networks
 excerpt: "Analyzes the polyhedral structure induced by ReLU networks to better understand their discrete geometry."
-zh_excerpt: "研究ReLU网络诱导的多面体结构，用于更系统地刻画其离散几何。"
+zh_excerpt: "研究 ReLU 神经网络线性区域诱导的多面体复形结构，用于刻画其离散几何。"
 date: 2026-01-01
 venue: "International Conference on Learning Representations (ICLR), Oral Presentation"
 zh_venue: "International Conference on Learning Representations (ICLR)，口头报告"
@@ -18,5 +18,5 @@ We study ReLU neural networks by examining the polyhedral complexes defined by t
 </div>
 
 <div data-lang="zh" markdown="1">
-我们从线性区域所定义的多面体复形出发研究ReLU神经网络，并推导相关界，描述这些区域在整体几何结构中的连接方式。
+我们通过研究 ReLU 神经网络线性区域形成的多面体复形来刻画其离散几何，并给出关于该复形连通性和直径的界限。
 </div>

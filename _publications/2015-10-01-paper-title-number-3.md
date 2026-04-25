@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/2015-10-01-mining-kg-chemical-reaction-fingerprints
 excerpt: "Methods for extracting chemical reaction fingerprints from large-scale knowledge graphs for downstream modeling."
-zh_excerpt: "从大规模知识图谱中提取化学反应指纹，并将其作为下游建模的结构化表示。"
+zh_excerpt: "从大规模化学知识图谱中挖掘化学反应指纹，用于反应相似性、聚类和预测建模等下游任务。"
 date: 2023-01-01
 venue: "2023 IEEE International Conference on Big Data"
 zh_venue: "2023 IEEE International Conference on Big Data"
@@ -18,5 +18,5 @@ We construct and mine large chemical knowledge graphs to derive reaction fingerp
 </div>
 
 <div data-lang="zh" markdown="1">
-我们构建并挖掘大型化学知识图谱，从中得到能够编码结构与上下文信息的反应指纹。这些指纹可用于反应相似度、聚类、和预测建模等任务，同时不需要额外训练大型嵌入模型。
+我们构建并挖掘大规模化学知识图谱，得到能够表征结构与上下文信息的化学反应指纹。这些指纹可用于反应相似性检索、聚类和预测建模等任务，并且无需额外训练大型嵌入模型。
 </div>

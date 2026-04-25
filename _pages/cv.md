@@ -129,7 +129,7 @@ Teaching
 
 * The Travelers Companies
   *软件开发者*（2019, 2024–2025）
-  * 参与图数据库、表示学习、和LLM相关工作，用于组织和检索内部文档。
+  * 参与图数据库、表示学习和 LLM 相关工作，用于组织和检索内部文档。
 
 * 康涅狄格大学工程学院
   *助教*（2021, 2024–现在）
@@ -141,7 +141,7 @@ Teaching
 
 服务和组织
 ======
-* Relucent（2026）- 用于分析ReLU神经网络几何结构的开源Python库（[pypi.org/project/relucent](https://pypi.org/project/relucent)）
+* Relucent（2026）- 用于分析 ReLU 神经网络线性区域与几何结构的开源 Python 库（[pypi.org/project/relucent](https://pypi.org/project/relucent)）
 * 康涅狄格大学 AI Summer Camp 主要组织者，2025
 * Tolland Middle School 计算机科学志愿教师，2023–2025
 * 康涅狄格大学研究生雇员工会（GEU）Social Justice Committee 成员，2022–2023

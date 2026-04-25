@@ -25,11 +25,11 @@ Are you researching ReLU network geometry? Check out my new Python package [**Re
 <div data-lang="zh" markdown="1">
 Hello world! 我叫 <span class="tooltip" data-tooltip="/bleɪk/">Blake</span>，欢迎来我的个人网站！
 
-如果你也关注ReLU网络的几何结构，可以看一看我最近做的Python包 [**Relucent**](https://pypi.org/project/relucent/)！
+如果你也关注 ReLU 神经网络的几何结构，可以看一看我最近开发的 Python 包 [**Relucent**](https://pypi.org/project/relucent/)！
 
 ## 页面：
 
 - **[论文](/publications/)** - 研究论文和相关项目
-- **[简历](/cv/)** - 教育、研究、工作、和教学经历 ([PDF版本](/files/Resume.pdf) - 英语)
+- **[简历](/cv/)** - 教育、研究、工作和教学经历 ([PDF版本](/files/Resume.pdf) - 英语)
 - **[教学](/teaching/)** - 我参与过的课程和客座讲课
 </div>

@@ -27,6 +27,7 @@ author:
   name             : "Blake B. Gaines"
   pronouns         : # example: "she/her"  
   bio              : "Ph.D. student in Computer Science at the University of Connecticut."
+  zh_bio           : "康涅狄格大学计算机科学博士研究生。"
   location         : "Storrs, CT"
   employer         : "University of Connecticut"
   uri              : # URL
