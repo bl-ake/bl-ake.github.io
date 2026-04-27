@@ -2,6 +2,53 @@
 
 <!-- start custom head snippets -->
 
+<!-- Set language before first paint so assistive tech gets the right locale immediately. -->
+<script>
+  (function () {
+    function normalizeLanguage(lang) {
+      if (!lang) {
+        return null;
+      }
+
+      var normalized = String(lang).toLowerCase();
+      if (normalized.indexOf('zh') === 0) {
+        return 'zh';
+      }
+      if (normalized.indexOf('en') === 0) {
+        return 'en';
+      }
+      return null;
+    }
+
+    var preferredLanguage = null;
+
+    try {
+      preferredLanguage = normalizeLanguage(localStorage.getItem('lang'));
+    } catch (e) {
+      preferredLanguage = null;
+    }
+
+    if (!preferredLanguage) {
+      var browserLanguages = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || navigator.userLanguage || navigator.browserLanguage];
+
+      for (var i = 0; i < browserLanguages.length; i += 1) {
+        preferredLanguage = normalizeLanguage(browserLanguages[i]);
+        if (preferredLanguage) {
+          break;
+        }
+      }
+    }
+
+    if (!preferredLanguage) {
+      preferredLanguage = 'en';
+    }
+
+    document.documentElement.lang = preferredLanguage === 'zh' ? 'zh-CN' : 'en';
+  })();
+</script>
+
 <!-- Support for Academicons -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
@@ -11,6 +58,11 @@
 
 <!-- Language toggle styles -->
 <style>
+  html[lang^="en"] [data-lang="zh"],
+  html[lang^="zh"] [data-lang="en"] {
+    display: none !important;
+  }
+
   .lang-toggle-item {
     display: flex;
     align-items: center;

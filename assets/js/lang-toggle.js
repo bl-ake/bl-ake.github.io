@@ -212,6 +212,31 @@
     authorToggle.setAttribute('aria-expanded', authorLinks.offsetParent === null ? 'false' : 'true');
   }
 
+  function applyLocalizedAttributes(lang) {
+    document.querySelectorAll('[data-alt-en], [data-aria-label-en], [data-title-en]').forEach(function (el) {
+      var preferredSuffix = lang === 'zh' ? 'zh' : 'en';
+      var fallbackSuffix = preferredSuffix === 'zh' ? 'en' : 'zh';
+
+      var preferredAlt = el.getAttribute('data-alt-' + preferredSuffix);
+      var fallbackAlt = el.getAttribute('data-alt-' + fallbackSuffix);
+      if (preferredAlt || fallbackAlt) {
+        el.setAttribute('alt', preferredAlt || fallbackAlt || '');
+      }
+
+      var preferredAriaLabel = el.getAttribute('data-aria-label-' + preferredSuffix);
+      var fallbackAriaLabel = el.getAttribute('data-aria-label-' + fallbackSuffix);
+      if (preferredAriaLabel || fallbackAriaLabel) {
+        el.setAttribute('aria-label', preferredAriaLabel || fallbackAriaLabel || '');
+      }
+
+      var preferredTitle = el.getAttribute('data-title-' + preferredSuffix);
+      var fallbackTitle = el.getAttribute('data-title-' + fallbackSuffix);
+      if (preferredTitle || fallbackTitle) {
+        el.setAttribute('title', preferredTitle || fallbackTitle || '');
+      }
+    });
+  }
+
   function applyLanguage(lang, options) {
     lang = normalizeLanguage(lang) || 'en';
     activeLanguage = lang;
@@ -237,6 +262,9 @@
       el.setAttribute('lang', elementLang === 'zh' ? 'zh-CN' : 'en');
     });
 
+    // Switch alt text and ARIA labels to the active language.
+    applyLocalizedAttributes(lang);
+
     // Translate archive page titles.
     var pageTitle = document.querySelector('.page__title');
     var path = window.location.pathname;
@@ -249,7 +277,7 @@
     var toggle = document.getElementById('lang-toggle');
     if (toggle) {
       toggle.textContent = 'EN / 中文';
-      toggle.setAttribute('aria-label', lang === 'en' ? 'Switch language to Chinese' : 'Switch language to English');
+      toggle.setAttribute('aria-label', lang === 'en' ? 'Switch language to Chinese' : '换到英语');
     }
 
     applyContrast(document.documentElement.getAttribute('data-contrast') === 'high');

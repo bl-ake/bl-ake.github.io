@@ -24,6 +24,8 @@ repository               : "bl-ake/bl-ake.github.io"
 author:
   # Biographic information
   avatar           : "avatar.png"
+  avatar_alt       : "Profile Photo"
+  avatar_alt_zh    : "头像"
   name             : "Blake B. Gaines"
   pronouns         : "He/They"  
   bio              : "Ph.D. student in Computer Science at the University of Connecticut."

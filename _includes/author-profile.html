@@ -8,9 +8,9 @@
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="Profile Photo"  fetchpriority="high" />
+    	<img src="{{ author.avatar }}" alt="{{ author.avatar_alt | default: 'Profile photo' }}" data-alt-en="{{ author.avatar_alt | default: 'Profile photo' }}" data-alt-zh="{{ author.avatar_alt_zh | default: '个人照片' }}" fetchpriority="high" />
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="Profile Photo"  fetchpriority="high" />
+    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.avatar_alt | default: 'Profile photo' }}" data-alt-en="{{ author.avatar_alt | default: 'Profile photo' }}" data-alt-zh="{{ author.avatar_alt_zh | default: '头像' }}" fetchpriority="high" />
     {% endif %}
   </div>
 
@@ -26,7 +26,7 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse" type="button" aria-label="Show author links" aria-expanded="false" aria-controls="author-links"><span data-lang="en">Follow</span><span data-lang="zh">关注</span></button>
+    <button class="btn btn--inverse" type="button" aria-label="Show author links" data-aria-label-en="Show author links" data-aria-label-zh="显示作者链接" aria-expanded="false" aria-controls="author-links"><span data-lang="en">Follow</span><span data-lang="zh">关注</span></button>
     <ul id="author-links" class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
@@ -79,7 +79,7 @@
         <li>
           <a href="{{ author.orcid }}">
             <i class="ai ai-orcid ai-fw icon-pad-right"></i>
-            <span data-lang="en">ORCID</span><span data-lang="zh">ORCID</span>
+            <span data-lang="en">ORCID</span><span data-lang="zh"><span lang="en">ORCID</span></span>
           </a>
         </li>
       {% endif %}
@@ -116,7 +116,7 @@
         <li>
           <a href="https://github.com/{{ author.github }}">
             <i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>
-            <span data-lang="en">GitHub</span><span data-lang="zh">GitHub</span>
+            <span data-lang="en">GitHub</span><span data-lang="zh"><span lang="en">GitHub</span></span>
           </a>
         </li>
       {% endif %}
@@ -191,7 +191,7 @@
         <li>
           <a href="https://twitter.com/{{ author.twitter }}">
             <i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>
-            <span data-lang="en">X (formerly Twitter)</span><span data-lang="zh">X（原 Twitter）</span>
+            <span data-lang="en">X (formerly Twitter)</span><span data-lang="zh"><span lang="en">X</span>（原 <span lang="en">Twitter</span>）</span>
           </a>
         </li>
       {% endif %}
