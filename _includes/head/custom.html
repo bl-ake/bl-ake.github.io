@@ -41,8 +41,11 @@
     position: static;
     flex: 0 0 auto;
     order: 2;
-    pointer-events: none;
+    pointer-events: auto;
     z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #site-nav.greedy-nav > button .navicon {
@@ -72,7 +75,7 @@
     position: static !important;
     right: auto !important;
     z-index: 1 !important;
-    pointer-events: none !important;
+    pointer-events: auto !important;
   }
 
   #site-nav.greedy-nav > button .navicon {
