@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 <div data-lang="en" markdown="1">
-Hello world! My name is <span class="tooltip" data-tooltip="/bleɪk/">Blake</span>, I'm a big fan of computers and life in general.
+Hello world! My name is <span class="tooltip" data-tooltip="/bleɪk/">Blake</span>, I'm a big fan of computers and life in general. I'm interested in machine learning theory, polyhedral geometry, and software for accessibility.
 
 Are you researching ReLU network geometry? Check out my new Python package [**Relucent**](https://pypi.org/project/relucent/)!
 
@@ -23,7 +23,7 @@ Are you researching ReLU network geometry? Check out my new Python package [**Re
 </div>
 
 <div data-lang="zh" markdown="1">
-Hello world! 我叫 <span class="tooltip" data-tooltip="/bleɪk/">Blake</span>，欢迎来我的个人网站！
+Hello world! 我叫 <span class="tooltip" data-tooltip="/bleɪk/">Blake</span>，欢迎来我的个人网站！我对机器学习理论、多面体几何，还有辅助功能软件很感兴趣。
 
 如果你也关注 ReLU 神经网络的几何结构，可以看一看我最近开发的 Python 包 [**Relucent**](https://pypi.org/project/relucent/)！
 
