@@ -14,7 +14,7 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
+<main id="main" tabindex="-1">
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
@@ -35,7 +35,7 @@ layout: default
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-        {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
+        {% if page.talk_type %}<p>{{ page.talk_type }} at {{ page.venue }}, {{ page.location }}</p>{% endif %}
 
         </header>
       {% endunless %}
@@ -75,4 +75,4 @@ layout: default
       </div>
     </div>
   {% endif %}
-</div>
+</main>

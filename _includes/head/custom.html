@@ -5,13 +5,8 @@
 <!-- Support for Academicons -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
-<!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
-<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
+<!-- favicon -->
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
-<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
-<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
-<link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
-<link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
 <!-- Language toggle styles -->
@@ -25,6 +20,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    min-width: 0;
   }
 
   .greedy-nav .visible-links li {
@@ -36,34 +32,281 @@
     flex: 0 0 auto;
   }
 
-  /* When the overflow toggle is visible, keep clear space on the right. */
-  #site-nav > button:not(.hidden) ~ .visible-links .lang-toggle-item {
-    margin-right: 3rem;
+  #site-nav.greedy-nav {
+    display: flex;
+    align-items: center;
   }
 
-  #lang-toggle {
-    background: none;
-    border: 1px solid currentColor;
+  #site-nav.greedy-nav > button {
+    position: static;
+    flex: 0 0 auto;
+    order: 2;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #site-nav.greedy-nav > button .navicon {
+    pointer-events: auto;
+  }
+
+  #site-nav.greedy-nav .visible-links {
+    flex: 1 1 auto;
+    order: 1;
+  }
+
+  #site-nav.greedy-nav .hidden-links {
+    order: 3;
+  }
+
+  #site-nav .nav-accessibility-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Keep custom nav controls from being covered by greedy-nav's absolute menu button. */
+  #site-nav.greedy-nav > button {
+    position: static !important;
+    right: auto !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  #site-nav.greedy-nav > button .navicon {
+    pointer-events: auto !important;
+  }
+
+  #lang-toggle,
+  #contrast-toggle {
+    background: #2a2a2a;
+    border: 1px solid #1a1a1a;
     border-radius: 3px;
     cursor: pointer;
     font-family: inherit;
     font-size: 0.75em;
-    color: inherit;
+    color: #f5f5f5;
     padding: 2px 7px;
     letter-spacing: 0.03em;
-    opacity: 0.65;
-    transition: opacity 0.15s;
+    opacity: 0.92;
+    transition: opacity 0.15s, background-color 0.15s, border-color 0.15s;
     line-height: 1.6;
   }
 
-  #lang-toggle:hover {
+  #lang-toggle:hover,
+  #contrast-toggle:hover,
+  #lang-toggle:focus-visible,
+  #contrast-toggle:focus-visible {
     opacity: 1;
+    background: #1f1f1f;
+    border-color: #111111;
+  }
+
+  #lang-toggle:focus-visible,
+  #contrast-toggle:focus-visible,
+  .greedy-nav > button:focus-visible,
+  .author__urls-wrapper button:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  #contrast-toggle[aria-pressed="true"] {
+    opacity: 1;
+    font-weight: 700;
+    background: #1b1b1b;
+    border-color: #0d0d0d;
   }
 
   .lang-toggle-item.hidden,
-  #lang-toggle.hidden {
+  #lang-toggle.hidden,
+  #contrast-toggle.hidden {
     display: inline-flex !important;
     visibility: visible !important;
+  }
+
+  html[data-contrast="high"] {
+    color-scheme: dark;
+    --hc-bg: #000000;
+    --hc-text: #ffffff;
+    --hc-border: #ffffff;
+    --hc-link: #00ffff;
+    --hc-link-hover: #ffff00;
+    --hc-link-visited: #ff9cf7;
+    --hc-focus-ring: #ffff00;
+    --hc-focus-ring-offset: #000000;
+    --global-base-color: #ffffff;
+    --global-bg-color: #000000;
+    --global-footer-bg-color: #000000;
+    --global-border-color: #ffffff;
+    --global-dark-border-color: #ffffff;
+    --global-code-background-color: #000000;
+    --global-code-text-color: #ffffff;
+    --global-fig-caption-color: #ffffff;
+    --global-link-color: var(--hc-link);
+    --global-link-color-hover: var(--hc-link-hover);
+    --global-link-color-visited: var(--hc-link-visited);
+    --global-masthead-link-color: #ffffff;
+    --global-masthead-link-color-hover: #ffff00;
+    --global-text-color: #ffffff;
+    --global-text-color-light: #ffffff;
+    --global-thead-color: #000000;
+    --global-toc-bg-color: #000000;
+    --global-selection-bg-color: #ffff00;
+    --global-selection-text-color: #000000;
+  }
+
+  html[data-contrast="high"] a {
+    color: var(--hc-link);
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+    text-decoration-thickness: 0.14em;
+  }
+
+  html[data-contrast="high"] a:hover,
+  html[data-contrast="high"] a:active {
+    color: var(--hc-link-hover);
+  }
+
+  html[data-contrast="high"] a:visited {
+    color: var(--hc-link-visited);
+  }
+
+  html[data-contrast="high"] a:focus-visible,
+  html[data-contrast="high"] button:focus-visible,
+  html[data-contrast="high"] .btn:focus-visible,
+  html[data-contrast="high"] input:focus-visible,
+  html[data-contrast="high"] select:focus-visible,
+  html[data-contrast="high"] textarea:focus-visible {
+    outline: 3px solid var(--hc-focus-ring);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--hc-focus-ring-offset);
+  }
+
+  html[data-contrast="high"] ::selection {
+    background: var(--global-selection-bg-color);
+    color: var(--global-selection-text-color);
+  }
+
+  html[data-contrast="high"] ::-moz-selection {
+    background: var(--global-selection-bg-color);
+    color: var(--global-selection-text-color);
+  }
+
+  html[data-contrast="high"] body,
+  html[data-contrast="high"] .initial-content,
+  html[data-contrast="high"] .page,
+  html[data-contrast="high"] .archive {
+    background: var(--hc-bg);
+    color: var(--hc-text);
+  }
+
+  html[data-contrast="high"] .masthead,
+  html[data-contrast="high"] .page__footer,
+  html[data-contrast="high"] .greedy-nav,
+  html[data-contrast="high"] .greedy-nav > button {
+    background: var(--hc-bg);
+    color: var(--hc-text);
+  }
+
+  html[data-contrast="high"] .page__content,
+  html[data-contrast="high"] .archive__item,
+  html[data-contrast="high"] .sidebar,
+  html[data-contrast="high"] .author__content,
+  html[data-contrast="high"] .author__urls {
+    background: var(--hc-bg);
+    color: var(--hc-text);
+    border-color: var(--hc-border);
+  }
+
+  html[data-contrast="high"] h1,
+  html[data-contrast="high"] h2,
+  html[data-contrast="high"] h3,
+  html[data-contrast="high"] h4,
+  html[data-contrast="high"] h5,
+  html[data-contrast="high"] h6,
+  html[data-contrast="high"] p,
+  html[data-contrast="high"] li,
+  html[data-contrast="high"] dt,
+  html[data-contrast="high"] dd,
+  html[data-contrast="high"] figcaption,
+  html[data-contrast="high"] small,
+  html[data-contrast="high"] strong,
+  html[data-contrast="high"] em {
+    color: var(--hc-text);
+  }
+
+  html[data-contrast="high"] code,
+  html[data-contrast="high"] pre,
+  html[data-contrast="high"] kbd,
+  html[data-contrast="high"] samp {
+    background: var(--hc-bg);
+    color: var(--hc-text);
+    border-color: var(--hc-border);
+  }
+
+  html[data-contrast="high"] blockquote,
+  html[data-contrast="high"] .notice,
+  html[data-contrast="high"] .notice--primary,
+  html[data-contrast="high"] .notice--info,
+  html[data-contrast="high"] .notice--warning,
+  html[data-contrast="high"] .notice--success,
+  html[data-contrast="high"] .notice--danger {
+    background: var(--hc-bg);
+    color: var(--hc-text);
+    border: 2px solid var(--hc-border);
+  }
+
+  html[data-contrast="high"] table,
+  html[data-contrast="high"] th,
+  html[data-contrast="high"] td {
+    background: var(--hc-bg);
+    color: var(--hc-text);
+    border-color: var(--hc-border);
+  }
+
+  html[data-contrast="high"] th {
+    border-bottom-width: 2px;
+  }
+
+  html[data-contrast="high"] hr {
+    border-color: var(--hc-border);
+  }
+
+  html[data-contrast="high"] input,
+  html[data-contrast="high"] select,
+  html[data-contrast="high"] textarea {
+    background: var(--hc-bg);
+    color: var(--hc-text);
+    border: 2px solid var(--hc-border);
+  }
+
+  html[data-contrast="high"] ::placeholder {
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  html[data-contrast="high"] .btn,
+  html[data-contrast="high"] button {
+    background: var(--hc-bg);
+    color: var(--hc-text) !important;
+    border: 2px solid var(--hc-border) !important;
+  }
+
+  html[data-contrast="high"] .btn:hover,
+  html[data-contrast="high"] .btn:active,
+  html[data-contrast="high"] button:hover,
+  html[data-contrast="high"] button:active {
+    background: var(--hc-text);
+    color: var(--hc-bg) !important;
+  }
+
+  html[data-contrast="high"] svg,
+  html[data-contrast="high"] .svg-inline--fa,
+  html[data-contrast="high"] .fa {
+    color: inherit;
+    fill: currentColor;
   }
 </style>
 

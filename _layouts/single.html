@@ -17,7 +17,7 @@ layout: default
 {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
+<main id="main" tabindex="-1">
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
@@ -64,20 +64,20 @@ layout: default
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
         <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">View
-            Paper</a></a>{% if page.pdfurl %} | <a href="{{ page.pdfurl }}">Download PDF</a>{% endif %} | <a
+            Paper</a>{% if page.pdfurl %} | <a href="{{ page.pdfurl }}">Download PDF</a>{% endif %} | <a
             href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download
             Bibtex</a></p>
         {% elsif page.citation and page.paperurl and page.slidesurl %}
         <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">View
-            Paper</a></a>{% if page.pdfurl %} | <a href="{{ page.pdfurl }}">Download PDF</a>{% endif %} | <a
+            Paper</a>{% if page.pdfurl %} | <a href="{{ page.pdfurl }}">Download PDF</a>{% endif %} | <a
             href="{{ page.slidesurl }}">Download Slides</a></p>
         {% elsif page.citation and page.paperurl and page.bibtexurl %}
         <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">View
-            Paper</a></a>{% if page.pdfurl %} | <a href="{{ page.pdfurl }}">Download PDF</a>{% endif %} | <a
+            Paper</a>{% if page.pdfurl %} | <a href="{{ page.pdfurl }}">Download PDF</a>{% endif %} | <a
             href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.citation and page.paperurl %}
         <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">View
-            Paper</a></a>{% if page.pdfurl %} | <a href="{{ page.pdfurl }}">Download PDF</a>{% endif %}</p>
+            Paper</a>{% if page.pdfurl %} | <a href="{{ page.pdfurl }}">Download PDF</a>{% endif %}</p>
         {% elsif page.citation and page.slidesurl and page.bibtexurl %}
         <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a
             href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
@@ -88,11 +88,11 @@ layout: default
         <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a> | <a
             href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.paperurl and page.bibtexurl %}
-        <p style="font-size: smaller"><a href="{{ page.paperurl }}">View Paper</a></a>{% if page.pdfurl %} | <a
+        <p style="font-size: smaller"><a href="{{ page.paperurl }}">View Paper</a>{% if page.pdfurl %} | <a
             href="{{ page.pdfurl }}">Download PDF</a>{% endif %} | <a href="{{ page.bibtexurl }}">Download Bibtex</a>
         </p>
         {% elsif page.paperurl %}
-        <p style="font-size: smaller"><a href="{{ page.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a></a>{% if page.pdfurl %} | <a
+        <p style="font-size: smaller"><a href="{{ page.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a>{% if page.pdfurl %} | <a
             href="{{ page.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %}</p>
         {% elsif page.citation and page.bibtexurl %}
         <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a
@@ -140,4 +140,4 @@ layout: default
     </div>
   </div>
   {% endif %}
-</div>
+</main>

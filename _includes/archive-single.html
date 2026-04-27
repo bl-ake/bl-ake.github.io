@@ -60,22 +60,21 @@
     </div>
     {% elsif post.excerpt and site.read_more == 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">
-    <p>{{ post.excerpt | markdownify | remove: '
-    <p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p>
+      {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong>
     </p>
     {% endif %}
 
     {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
-    <p><span data-lang="en">Recommended citation</span><span data-lang="zh">推荐引用</span>: {{ post.citation }}<br /><a href="{{ post.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %} | <a
+    <p><span data-lang="en">Recommended citation</span><span data-lang="zh">推荐引用</span>: {{ post.citation }}<br /><a href="{{ post.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %} | <a
         href="{{ post.slidesurl }}"><span data-lang="en">Download Slides</span><span data-lang="zh">下载幻灯片</span></a> | <a href="{{ post.bibtexurl }}"><span data-lang="en">Download Bibtex</span><span data-lang="zh">下载 BibTeX</span></a></p>
     {% elsif post.citation and post.paperurl and post.slidesurl %}
-    <p><span data-lang="en">Recommended citation</span><span data-lang="zh">推荐引用</span>: {{ post.citation }}<br /><a href="{{ post.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %} | <a
+    <p><span data-lang="en">Recommended citation</span><span data-lang="zh">推荐引用</span>: {{ post.citation }}<br /><a href="{{ post.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %} | <a
         href="{{ post.slidesurl }}"><span data-lang="en">Download Slides</span><span data-lang="zh">下载幻灯片</span></a></p>
     {% elsif post.citation and post.paperurl and post.bibtexurl %}
-    <p><span data-lang="en">Recommended citation</span><span data-lang="zh">推荐引用</span>: {{ post.citation }}<br /><a href="{{ post.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %} | <a
+    <p><span data-lang="en">Recommended citation</span><span data-lang="zh">推荐引用</span>: {{ post.citation }}<br /><a href="{{ post.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %} | <a
         href="{{ post.bibtexurl }}"><span data-lang="en">Download Bibtex</span><span data-lang="zh">下载 BibTeX</span></a></p>
     {% elsif post.citation and post.paperurl %}
-    <p><span data-lang="en">Recommended citation</span><span data-lang="zh">推荐引用</span>: {{ post.citation }}<br /><a href="{{ post.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %}</p>
+    <p><span data-lang="en">Recommended citation</span><span data-lang="zh">推荐引用</span>: {{ post.citation }}<br /><a href="{{ post.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %}</p>
     {% elsif post.citation and post.slidesurl and post.bibtexurl %}
     <p><span data-lang="en">Recommended citation</span><span data-lang="zh">推荐引用</span>: {{ post.citation }}<br /><a href="{{ post.slidesurl }}"><span data-lang="en">Download Slides</span><span data-lang="zh">下载幻灯片</span></a> | <a
         href="{{ post.bibtexurl}}"><span data-lang="en">Download Bibtex</span><span data-lang="zh">下载 BibTeX</span></a></p>
@@ -86,9 +85,9 @@
     {% elsif post.citation %}
     <p><span data-lang="en">Recommended citation</span><span data-lang="zh">推荐引用</span>: {{ post.citation }}</p>
     {% elsif post.paperurl and post.bibtexurl %}
-    <p><a href=" {{ post.paperurl }} "><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %} | <a href="{{ post.bibtexurl }}"><span data-lang="en">Download Bibtex</span><span data-lang="zh">下载 BibTeX</span></a></p>
+    <p><a href="{{ post.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %} | <a href="{{ post.bibtexurl }}"><span data-lang="en">Download Bibtex</span><span data-lang="zh">下载 BibTeX</span></a></p>
     {% elsif post.paperurl %}
-    <p><a href=" {{ post.paperurl }} "><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %}</p>
+    <p><a href="{{ post.paperurl }}"><span data-lang="en">View Paper</span><span data-lang="zh">查看论文</span></a>{% if post.pdfurl %} | <a href="{{ post.pdfurl }}"><span data-lang="en">Download PDF</span><span data-lang="zh">下载 PDF</span></a>{% endif %}</p>
     {% elsif post.slidesurl and post.bibtexurl %}
     <p><a href="{{ post.slidesurl }}"><span data-lang="en">Download Slides</span><span data-lang="zh">下载幻灯片</span></a> | <a href="{{ post.bibtexurl }}"><span data-lang="en">Download Bibtex</span><span data-lang="zh">下载 BibTeX</span></a></p>
     {% elsif post.slidesurl %}

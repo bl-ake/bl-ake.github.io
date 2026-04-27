@@ -15,6 +15,13 @@
   if (localStorage.getItem('theme') === 'dark') {
     localStorage.setItem('theme', 'light');
   }
+  try {
+    if (localStorage.getItem('contrast') === 'high') {
+      document.documentElement.setAttribute('data-contrast', 'high');
+    }
+  } catch (e) {
+    // Some browser privacy settings block localStorage; contrast can still be toggled after load.
+  }
 </script>
 
 <!-- For all browsers -->

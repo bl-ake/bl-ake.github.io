@@ -1,6 +1,7 @@
 ---
 permalink: /
-# title: "About"
+title: "About"
+zh_title: "关于"
 author_profile: true
 redirect_from: 
   - /about/
