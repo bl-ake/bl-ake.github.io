@@ -29,9 +29,16 @@
 
   function getStoredContrast() {
     try {
-      return localStorage.getItem('contrast') === 'high';
+      var stored = localStorage.getItem('contrast');
+      if (stored === 'high') {
+        return true;
+      }
+      if (stored === 'standard') {
+        return false;
+      }
+      return null;
     } catch (e) {
-      return false;
+      return null;
     }
   }
 
@@ -40,11 +47,29 @@
       if (isHighContrast) {
         localStorage.setItem('contrast', 'high');
       } else {
-        localStorage.removeItem('contrast');
+        localStorage.setItem('contrast', 'standard');
       }
     } catch (e) {
       // Some browser privacy settings block localStorage; contrast selection still works for this page load.
     }
+  }
+
+  function prefersHighContrast() {
+    if (!window.matchMedia) {
+      return false;
+    }
+
+    // `forced-colors` and `prefers-contrast` cover major high-contrast modes.
+    return window.matchMedia('(forced-colors: active)').matches
+      || window.matchMedia('(prefers-contrast: more)').matches;
+  }
+
+  function getInitialContrast() {
+    var stored = getStoredContrast();
+    if (stored !== null) {
+      return stored;
+    }
+    return prefersHighContrast();
   }
 
   function normalizeLanguage(lang) {
@@ -299,7 +324,7 @@
     ensureToggleVisible();
     window.addEventListener('resize', ensureToggleVisible);
 
-    applyContrast(getStoredContrast());
+    applyContrast(getInitialContrast());
     applyLanguage(getInitialLanguage());
   });
 })();
