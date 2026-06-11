@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <div data-lang="en" markdown="1">
-Hello world! My name is <span class="tooltip" data-tooltip="/bleɪk/" aria-hidden="true">Blake</span><span class="screen-reader-text">Blake</span>, I'm a big fan of computers and life in general. I'm interested in machine learning theory, polyhedral geometry, and software for accessibility.
+Hello world! My name is <span class="tooltip" data-tooltip="/bleɪk/" aria-hidden="true">Blake</span><span class="screen-reader-text">Blake</span>, I'm a big fan of computers and life in general. My interests include machine learning theory, polyhedral geometry, and software for accessibility.
 
 Are you researching ReLU network geometry? Check out my new Python package [**Relucent**](https://pypi.org/project/relucent/)!
 
